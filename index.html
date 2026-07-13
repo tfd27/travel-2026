@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 속초·설악 가족여행 가이드</title>
+    <!-- Tailwind CSS 및 이모지 폰트 로드 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap');
+        body { font-family: 'Pretendard', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen pb-12">
+
+    <!-- 상단 헤더 -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-4 py-6 sticky top-0 z-50 shadow-md">
+        <div class="max-w-md mx-auto flex justify-between items-center">
+            <div>
+                <p class="text-xs text-blue-100 font-semibold tracking-wider">2026.07.15 - 07.17 (2박 3일)</p>
+                <h1 class="text-xl font-bold flex items-center gap-2 mt-0.5">
+                    <i class="fa-solid fa-compass text-amber-300"></i> 속초·설악 가족여행
+                </h1>
+            </div>
+            <span class="bg-white/20 text-xs px-2.5 py-1 rounded-full font-medium">👨‍👩‍👧 3인 가족</span>
+        </div>
+    </header>
+
+    <main class="max-w-md mx-auto px-4 mt-6 space-y-8">
+        
+        <!-- 출발지 및 숙소 정보 요약 카드 -->
+        <section class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 space-y-2 text-sm">
+            <div class="flex items-start gap-2.5">
+                <i class="fa-solid fa-location-dot text-red-500 mt-1"></i>
+                <div>
+                    <span class="font-semibold text-slate-500 block text-xs">출발지</span>
+                    <p class="text-slate-700 font-medium">용인시 기흥구 흥덕3로 60 (07:00 출발)</p>
+                </div>
+            </div>
+            <div class="h-px bg-slate-100 my-2"></div>
+            <div class="flex items-start gap-2.5">
+                <i class="fa-solid fa-hotel text-blue-500 mt-1"></i>
+                <div>
+                    <span class="font-semibold text-slate-500 block text-xs">숙소</span>
+                    <p class="text-slate-700 font-medium">켄싱턴호텔 설악</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1일 차 -->
+        <section class="space-y-4">
+            <div class="flex items-center gap-2 border-b border-slate-200 pb-2">
+                <span class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">DAY 1</span>
+                <h2 class="text-lg font-bold text-slate-900">7월 15일 (수) : 설악산 & 바다</h2>
+            </div>
+
+            <!-- 타임라인 아이템들 -->
+            <div class="relative border-l-2 border-slate-200 pl-4 ml-2 space-y-6">
+                <!-- 아이템 1 -->
+                <div class="relative">
+                    <div class="absolute -left-[21px] top-1 bg-blue-600 w-2 h-2 rounded-full ring-4 ring-blue-50 grid place-items-center"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xs font-bold text-blue-600">08:15</span>
+                        <h3 class="font-bold text-slate-800 text-sm">홍천휴게소 (양양방향)</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-0.5">홍천한우국밥, 돈가스로 아침 해결 & 홍천 옥수수 빵 사기</p>
+                    <button onclick="togglePlan('p1')" class="mt-1 text-[11px] text-amber-600 font-semibold bg-amber-50 px-2 py-0.5 rounded flex items-center gap-1">
+                        <i class="fa-solid fa-shuffle"></i> 플랜 B 확인
+                    </button>
+                    <div id="p1" class="hidden mt-2 bg-amber-50/70 border border-amber-100 p-2 rounded text-xs text-slate-600">
+                        💡 아이가 자고 있다면 무리해서 깨우지 말고 <strong>내린천휴게소</strong>에서 한 번에 길게 쉬어가기!
+                    </div>
+                </div>
+
+                <!-- 아이템 2 -->
+                <div class="relative">
+                    <div class="absolute -left-[21px] top-1 bg-blue-600 w-2 h-2 rounded-full ring-4 ring-blue-50"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xs font-bold text-blue-600">10:40</span>
+                        <h3 class="font-bold text-slate-800 text-sm">설악산 국립공원 케이블카</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-0.5">현장 티켓 발권 후 권금성 탑승. 웅장한 바위와 바다 조망</p>
+                    <button onclick="togglePlan('p2')" class="mt-1 text-[11px] text-amber-600 font-semibold bg-amber-50 px-2 py-0.5 rounded flex items-center gap-1">
+                        <i class="fa-solid fa-shuffle"></i> 플랜 B 확인
+                    </button>
+                    <div id="p2" class="hidden mt-2 bg-amber-50/70 border border-amber-100 p-2 rounded text-xs text-slate-600">
+                        💡 강풍이나 비로 운행 중단 시 실내 체험 시설인 <strong>국립산악박물관</strong>으로 변경 (어린이 암벽등반 무료체험 가능)
+                    </div>
+                </div>
+
+                <!-- 아이템 3 -->
+                <div class="relative">
+                    <div class="absolute -left-[21px] top-1 bg-blue-600 w-2 h-2 rounded-full ring-4 ring-blue-50"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xs font-bold text-blue-600">13:15</span>
+                        <h3 class="font-bold text-slate-800 text-sm">점심: 김정옥할머니순두부본점</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-0.5">학사평 순두부마을 대표 로컬 맛집. 몽글몽글 담백한 초당순두부</p>
+                    <button onclick="togglePlan('p3')" class="mt-1 text-[11px] text-amber-600 font-semibold bg-amber-50 px-2 py-0.5 rounded flex items-center gap-1">
+                        <i class="fa-solid fa-shuffle"></i> 플랜 B 확인
+                    </button>
+                    <div id="p3" class="hidden mt-2 bg-amber-50/70 border border-amber-100 p-2 rounded text-xs text-slate-600">
+                        💡 아이가 더운 날 뜨거운 국물을 싫어하면 매콤달콤 명태회냉면이 있는 <strong>낙천회관</strong>이나 시원한 <strong>한성칼국수(장칼국수)</strong>로 조율!
+                    </div>
+                </div>
+
+                <!-- 아이템 4 -->
+                <div class="relative">
+                    <div class="absolute -left-[21px] top-1 bg-blue-600 w-2 h-2 rounded-full ring-4 ring-blue-50"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xs font-bold text-blue-600">14:30</span>
+                        <h3 class="font-bold text-slate-800 text-sm">켄싱턴호텔 설악 체크인 및 휴식</h3>
+                    </div>
+                </div>
+
+                <!-- 아이템 5 -->
+                <div class="relative">
+                    <div class="absolute -left-[21px] top-1 bg-blue-600 w-2 h-2 rounded-full ring-4 ring-blue-50"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xs font-bold text-blue-600">16:00</span>
+                        <h3 class="font-bold text-slate-800 text-sm">속초해수욕장 & 속초아이 대관람차</h3>
+                    </div>
+                    <button onclick="togglePlan('p4')" class="mt-1 text-[11px] text-amber-600 font-semibold bg-amber-50 px-2 py-0.5 rounded flex items-center gap-1">
+                        <i class="fa-solid fa-shuffle"></i> 플랜 B 확인
+                    </button>
+                    <div id="p4" class="hidden mt-2 bg-amber-50/70 border border-amber-100 p-2 rounded text-xs text-slate-600">
+                        💡 7월 중순 오후 실외 무더위가 너무 심할 경우, 에어컨 시원한 실내 미디어아트 전시장인 <strong>뮤지엄X</strong>로 변경하기!
+                    </div>
+                </div>
+
+                <!-- 아이템 6 -->
+                <div class="relative">
+                    <div class="absolute -left-[21px] top-1 bg-blue-600 w-2 h-2 rounded-full ring-4 ring-blue-50"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xs font-bold text-blue-600">17:45</span>
+                        <h3 class="font-bold text-slate-800 text-sm">저녁: 키친온유 (이탈리안)</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-0.5">전복 리소토와 파스타가 맛있는 감성 양식당 (캐치테이블 원격줄서기 추천)</p>
+                    <button onclick="togglePlan('p5')" class="mt-1 text-[11px] text-amber-600 font-semibold bg-amber-50 px-2 py-0.5 rounded flex items-center gap-1">
+                        <i class="fa-solid fa-shuffle"></i> 플랜 B 확인
+                    </button>
+                    <div id="p5" class="hidden mt-2 bg-amber-50/70 border border-amber-100 p-2 rounded text-xs text-slate-600">
+                        💡 "바닷가에 왔으니 회를 먹어야지!" 하신다면 근처 <strong>대포항 수산시장</strong>이나 외옹치항 난전에서 제철 활어회 추천!
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2일 차 -->
+        <section class="space-y-4">
+            <div class="flex items-center gap-2 border-b border-slate-200 pb-2">
+                <span class="bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded">DAY 2</span>
+                <h2 class="text-lg font-bold text-slate-900">7월 16일 (목) : 워터파크 & 시장</h2>
+            </div>
+
+            <div class="relative border-l-2 border-slate-200 pl-4 ml-2 space-y-6">
+                <div class="relative">
+                    <div class="absolute -left-[21px] top-1 bg-emerald-600 w-2 h-2 rounded-full ring-4 ring-emerald-50"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xs font-bold text-emerald-600">10:15</span>
+                        <h3 class="font-bold text-slate-800 text-sm">설악워터피아 주간 물놀이</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-0.5">초등학생 맞춤 어트랙션 및 야외 스파 밸리 온천욕. 체력 안배를 위해 15:00 전후 여유롭게 퇴장</p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[21px] top-1 bg-emerald-600 w-2 h-2 rounded-full ring-4 ring-emerald-50"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xs font-bold text-emerald-600">15:30</span>
+                        <h3 class="font-bold text-slate-800 text-sm">시드누아 속초점 (베이커리)</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-0.5">식물원 감성의 대형 카페에서 소금빵과 음료로 당 충전</p>
+                    <button onclick="togglePlan('p6')" class="mt-1 text-[11px] text-amber-600 font-semibold bg-amber-50 px-2 py-0.5 rounded flex items-center gap-1">
+                        <i class="fa-solid fa-shuffle"></i> 플랜 B 확인
+                    </button>
+                    <div id="p6" class="hidden mt-2 bg-amber-50/70 border border-amber-100 p-2 rounded text-xs text-slate-600">
+                        💡 압도적인 울산바위 정면 뷰를 자랑하는 SNS 명소 <strong>더엠브로시아</strong>(소노펠리체 델피노 10층)도 훌륭한 대안!
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[21px] top-1 bg-emerald-600 w-2 h-2 rounded-full ring-4 ring-emerald-50"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xs font-bold text-emerald-600">17:00</span>
+                        <h3 class="font-bold text-slate-800 text-sm">아바이마을 갯배 & 단천식당</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-0.5">아이가 직접 줄을 당겨보는 이색 갯배 체험 후 1박2일 명태회냉면·오징어순대 맛보기</p>
+                    <button onclick="togglePlan('p7')" class="mt-1 text-[11px] text-amber-600 font-semibold bg-amber-50 px-2 py-0.5 rounded flex items-center gap-1">
+                        <i class="fa-solid fa-shuffle"></i> 플랜 B 확인
+                    </button>
+                    <div id="p7" class="hidden mt-2 bg-amber-50/70 border border-amber-100 p-2 rounded text-xs text-slate-600">
+                        💡 물놀이 후 고기 보충이 필요하다면 로컬 패밀리 레스토랑급 갈비집인 엑스포 공원 근처 <strong>돈우마을</strong>강추! 반찬이 깔끔하고 정갈합니다.
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[21px] top-1 bg-emerald-600 w-2 h-2 rounded-full ring-4 ring-emerald-50"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xs font-bold text-emerald-600">18:40</span>
+                        <h3 class="font-bold text-slate-800 text-sm">속초중앙시장 야식 투어</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-0.5">만석닭강정, 새우튀김, 씨앗호떡 등 다양한 주전부리를 포장해 숙소에서 편하게 야식 즐기기</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3일 차 -->
+        <section class="space-y-4">
+            <div class="flex items-center gap-2 border-b border-slate-200 pb-2">
+                <span class="bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded">DAY 3</span>
+                <h2 class="text-lg font-bold text-slate-900">7월 17일 (금) : 체험 후 여유로운 귀가</h2>
+            </div>
+
+            <div class="relative border-l-2 border-slate-200 pl-4 ml-2 space-y-6">
+                <div class="relative">
+                    <div class="absolute -left-[21px] top-1 bg-purple-600 w-2 h-2 rounded-full ring-4 ring-purple-50"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xs font-bold text-purple-600">10:45</span>
+                        <h3 class="font-bold text-slate-800 text-sm">속초시립박물관</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-0.5">실향민 문화 재현지 및 다양한 민속놀이 체험존. 전망대 설악산 뷰가 숨은 포인트</p>
+                    <button onclick="togglePlan('p8')" class="mt-1 text-[11px] text-amber-600 font-semibold bg-amber-50 px-2 py-0.5 rounded flex items-center gap-1">
+                        <i class="fa-solid fa-shuffle"></i> 플랜 B 확인
+                    </button>
+                    <div id="p8" class="hidden mt-2 bg-amber-50/70 border border-amber-100 p-2 rounded text-xs text-slate-600">
+                        💡 역사 체험보다 자연 조망을 더 원한다면 바다 위에 만들어진 완만한 산책로인 <strong>외옹치 바다향기로</strong> 가볍게 걷기!
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[21px] top-1 bg-purple-600 w-2 h-2 rounded-full ring-4 ring-purple-50"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xs font-bold text-purple-600">12:30</span>
+                        <h3 class="font-bold text-slate-800 text-sm">청초호 물회 식사 & 칠성조선소</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-0.5">60년 된 조선소를 리모델링한 힙한 공간 구경 및 청초호 조망 후 13:45쯤 용인으로 출발</p>
+                    <button onclick="togglePlan('p9')" class="mt-1 text-[11px] text-amber-600 font-semibold bg-amber-50 px-2 py-0.5 rounded flex items-center gap-1">
+                        <i class="fa-solid fa-shuffle"></i> 플랜 B 확인
+                    </button>
+                    <div id="p9" class="hidden mt-2 bg-amber-50/70 border border-amber-100 p-2 rounded text-xs text-slate-600">
+                        💡 고속도로 정체 전 속초를 빨리 빠져나가고 싶다면, 인제IC 근처 용대리 황태마을 <strong>용바위식당</strong>에 들러 진한 황태국밥과 구이로 식사하기!
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[21px] top-1 bg-purple-600 w-2 h-2 rounded-full ring-4 ring-purple-50"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xs font-bold text-purple-600">15:00</span>
+                        <h3 class="font-bold text-slate-800 text-sm">귀갓길 1차: 가평휴게소 (서울방향)</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-0.5">명물 '가평맛남샌드' 및 바삭한 잣호두과자로 장거리 운전 피로 리프레시</p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[21px] top-1 bg-purple-600 w-2 h-2 rounded-full ring-4 ring-purple-50"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xs font-bold text-purple-600">16:40</span>
+                        <h3 class="font-bold text-slate-800 text-sm">귀갓길 2차: 경기광주휴게소 (용인방향)</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-0.5">집 도착 전 한옥풍 휴게소에서 가볍게 화장실 이용 및 커피 한 잔 충전</p>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-[21px] top-1 bg-indigo-700 w-2.5 h-2.5 rounded-full ring-4 ring-indigo-50"></div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-xs font-bold text-indigo-700">17:40</span>
+                        <h3 class="font-bold text-indigo-900 text-sm">용인 기흥구 흥덕3로 60 집 도착 🏡</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // 플랜 B 토글 기능
+        function togglePlan(id) {
+            const el = document.getElementById(id);
+            if (el.classList.contains('hidden')) {
+                el.classList.remove('hidden');
+            } else {
+                el.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
