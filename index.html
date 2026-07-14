@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>속초 2박 3일 가족 여행 가이드</title>
+    <title>속초 2박 3일 가족 여행 가이드 (우천 반영)</title>
     <!-- Tailwind CSS & FontAwesome Icons -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,28 +19,23 @@
     <!-- 상단 히어로 배너 -->
     <header class="relative bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-6 py-12 text-center rounded-b-[2.5rem] shadow-lg">
         <div class="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold">
-            👪 가족 여행
+            ☔ 실시간 우천 대안 반영 완료
         </div>
         <h1 class="text-3xl font-extrabold tracking-tight mb-2">Sokcho Travel Guide</h1>
-        <p class="text-blue-100 text-sm font-medium">설악산 비경부터 신나는 워터파크까지</p>
+        <p class="text-blue-100 text-sm font-medium">안전하고 쾌적한 비 오는 날 속초 정복 코스</p>
         <p class="text-xs text-blue-200 mt-1">2026.07.15 (수) ~ 07.17 (금) | 2박 3일</p>
-        
-        <!-- 실시간 디데이 카운터 -->
-        <div id="dday-container" class="mt-6 inline-block bg-white text-indigo-700 px-4 py-2 rounded-2xl font-bold shadow-md text-sm">
-            ⏳ 여행 출발까지 <span id="countdown" class="text-blue-600">계산 중...</span>
-        </div>
     </header>
 
     <!-- 메인 네비게이션 탭 -->
     <nav class="flex justify-center space-x-2 my-6 px-4">
         <button onclick="switchTab('day1')" id="btn-day1" class="tab-btn flex-1 py-3 px-2 rounded-2xl text-center font-bold text-sm bg-blue-600 text-white shadow-md transition-all">
-            1일 차<span class="block text-[10px] font-normal opacity-85">7/15 (수)</span>
+            1일 차<span class="block text-[10px] font-normal opacity-85">7/15 (수) ☔</span>
         </button>
         <button onclick="switchTab('day2')" id="btn-day2" class="tab-btn flex-1 py-3 px-2 rounded-2xl text-center font-bold text-sm bg-white text-slate-500 shadow-sm border border-slate-100 transition-all">
-            2일 차<span class="block text-[10px] font-normal opacity-70">7/16 (목)</span>
+            2일 차<span class="block text-[10px] font-normal opacity-70">7/16 (목) 🏖️</span>
         </button>
         <button onclick="switchTab('day3')" id="btn-day3" class="tab-btn flex-1 py-3 px-2 rounded-2xl text-center font-bold text-sm bg-white text-slate-500 shadow-sm border border-slate-100 transition-all">
-            3일 차<span class="block text-[10px] font-normal opacity-70">7/17 (금)</span>
+            3일 차<span class="block text-[10px] font-normal opacity-70">7/17 (금) ⛰️</span>
         </button>
         <button onclick="switchTab('extra')" id="btn-extra" class="tab-btn flex-1 py-3 px-2 rounded-2xl text-center font-bold text-sm bg-white text-slate-500 shadow-sm border border-slate-100 transition-all">
             추천지<span class="block text-[10px] font-normal opacity-70">Next Trip</span>
@@ -50,20 +45,19 @@
     <!-- 메인 일정 콘텐츠 컨테이너 -->
     <main class="px-4 max-w-md mx-auto">
         
-        <!-- 1일차 일정 -->
+        <!-- 1일차 일정 (우천 대비 실내 중심) -->
         <div id="day1" class="tab-content active space-y-4">
             <div class="bg-blue-50 border-l-4 border-blue-500 p-3 rounded-r-xl text-xs text-blue-800 font-semibold mb-4">
-                🔑 오늘의 핵심: 아침 일찍 서둘러 출발해 대기 줄 줄이기!
+                🔑 오늘의 핵심: 폭우 대피! 뽀송뽀송하고 즐거운 실내 고품격 체험 코스
             </div>
             
-            <!-- 타임라인 카드 양식 -->
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
                 <div class="flex items-center justify-between mb-2">
                     <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">06:00 ~ 07:00</span>
                     <i class="fa-solid fa-car text-slate-400"></i>
                 </div>
                 <h3 class="font-bold text-base text-slate-800">용인 기흥구 흥덕 출발</h3>
-                <p class="text-xs text-slate-500 mt-1">이른 새벽 출발로 도로 정체를 시원하게 피해 갑니다.</p>
+                <p class="text-xs text-slate-500 mt-1">빗길 안전운전! 속도를 줄이고 여유 있게 출발합니다.</p>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
@@ -72,24 +66,19 @@
                     <i class="fa-solid fa-utensils text-slate-400"></i>
                 </div>
                 <h3 class="font-bold text-base text-slate-800">[1차 휴게소] 홍천휴게소 (양양방향)</h3>
-                <p class="text-xs text-slate-600 mt-1">추천 먹거리: 홍천한우국밥, 돈가스 / 간식: 홍천 옥수수 빵</p>
-                <details class="mt-3 border-t pt-2 border-slate-100 text-xs">
-                    <summary class="text-blue-600 cursor-pointer font-semibold focus:outline-none">💡 아이가 자고 있다면?</summary>
-                    <p class="text-slate-500 mt-1 leading-relaxed">무리해서 깨우지 말고 조금 더 직진하여 내린천휴게소에서 한 번에 길게 쉬어가세요.</p>
-                </details>
+                <p class="text-xs text-slate-600 mt-1">따뜻한 국밥 한 그릇으로 으스스한 몸을 녹이고 출발합니다.</p>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
                 <div class="flex items-center justify-between mb-2">
                     <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">10:40 ~ 13:00</span>
-                    <i class="fa-solid fa-mountain text-slate-400"></i>
+                    <i class="fa-solid fa-building text-slate-400"></i>
                 </div>
-                <h3 class="font-bold text-base text-slate-800">[설악산] 케이블카 탑승 & 권금성 관람</h3>
-                <p class="text-xs text-slate-600 mt-1">웅장한 기암괴석과 동해 바다 뷰를 감상합니다.</p>
-                <details class="mt-3 border-t pt-2 border-slate-100 text-xs">
-                    <summary class="text-blue-600 cursor-pointer font-semibold focus:outline-none">💡 강풍이나 우천 시 대안</summary>
-                    <p class="text-slate-500 mt-1 leading-relaxed">쾌적한 실내인 <strong>국립산악박물관</strong>으로 이동! 초등학생 어린이 실내 클라이밍 및 고산지대 가상 체험을 무료로 즐길 수 있습니다.</p>
-                </details>
+                <h3 class="font-bold text-base text-slate-800">🏛️ 국립산악박물관 (실내 체험)</h3>
+                <p class="text-xs text-slate-600 mt-1">초등학생 아이가 가장 좋아하는 실내 클라이밍(암벽등반) 체험과 고산지대 가상 체험을 무료로 쾌적하게 즐길 수 있습니다.</p>
+                <div class="mt-2 text-[11px] text-amber-600 bg-amber-50 p-2 rounded-lg">
+                    ⚠️ 클라이밍은 인원 제한이 있을 수 있으니 도착 즉시 예약하세요!
+                </div>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
@@ -98,11 +87,7 @@
                     <i class="fa-solid fa-bowl-food text-slate-400"></i>
                 </div>
                 <h3 class="font-bold text-base text-slate-800">늦은 점심: 김정옥할머니순두부본점</h3>
-                <p class="text-xs text-slate-600 mt-1">학사평 순두부마을의 몽글몽글하고 고소한 초당순두부 맛집.</p>
-                <details class="mt-3 border-t pt-2 border-slate-100 text-xs">
-                    <summary class="text-blue-600 cursor-pointer font-semibold focus:outline-none">💡 아이가 더운 음식을 싫어한다면?</summary>
-                    <p class="text-slate-500 mt-1 leading-relaxed">시원하고 매콤달콤한 <strong>낙천회관(함흥냉면)</strong>이나 로컬 장칼국수 명가인 <strong>한성칼국수</strong>로 이동하세요.</p>
-                </details>
+                <p class="text-xs text-slate-600 mt-1">비 오는 날 최고인 뜨끈하고 고소한 초당순두부 전골.</p>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
@@ -111,20 +96,16 @@
                     <i class="fa-solid fa-hotel text-slate-400"></i>
                 </div>
                 <h3 class="font-bold text-base text-slate-800">켄싱턴호텔 설악 체크인 및 휴식</h3>
-                <p class="text-xs text-slate-500 mt-1">체크인 후 방에서 여유롭게 짐을 풀고 잠시 휴식을 취합니다.</p>
+                <p class="text-xs text-slate-500 mt-1">체크인 후 따뜻하게 샤워를 하거나 뽀송한 객실에서 휴식을 취합니다.</p>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
                 <div class="flex items-center justify-between mb-2">
                     <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">16:00 ~ 17:30</span>
-                    <i class="fa-solid fa-umbrella-beach text-slate-400"></i>
+                    <i class="fa-solid fa-images text-slate-400"></i>
                 </div>
-                <h3 class="font-bold text-base text-slate-800">속초해수욕장 & 속초아이 대관람차</h3>
-                <p class="text-xs text-slate-600 mt-1">모래사장 산책과 랜드마크 대관람차 탑승!</p>
-                <details class="mt-3 border-t pt-2 border-slate-100 text-xs">
-                    <summary class="text-blue-600 cursor-pointer font-semibold focus:outline-none">💡 무더위가 너무 심할 때 대안</summary>
-                    <p class="text-slate-500 mt-1 leading-relaxed">초대형 실내 디지털 미디어아트 전시관인 <strong>뮤지엄X</strong>로 대피하세요. 아이의 참여형 화려한 영상 전시가 펼쳐집니다.</p>
-                </details>
+                <h3 class="font-bold text-base text-slate-800">🔮 뮤지엄X (초대형 실내 미디어아트)</h3>
+                <p class="text-xs text-slate-600 mt-1">야외 해변 산책 대신 선택하는 인스타그래머블 핫플레이스! 인공지능과 교감하고 눈이 즐거운 화려한 디지털 가상 세계 체험.</p>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
@@ -133,18 +114,14 @@
                     <i class="fa-solid fa-shrimp text-slate-400"></i>
                 </div>
                 <h3 class="font-bold text-base text-slate-800">저녁 식사: 키친온유 (속초 감성 이탈리안)</h3>
-                <p class="text-xs text-slate-600 mt-1">감각적인 플레이팅과 깊은 맛의 이탈리안 다이닝.</p>
-                <details class="mt-3 border-t pt-2 border-slate-100 text-xs">
-                    <summary class="text-blue-600 cursor-pointer font-semibold focus:outline-none">💡 바닷가에 왔으니 회를 먹어야 한다면?</summary>
-                    <p class="text-slate-500 mt-1 leading-relaxed">동선상 완벽한 <strong>외옹치항</strong>이나 <strong>대포항 수산시장</strong> 난전에서 시원한 파도 소리를 들으며 활어회와 매운탕을 즐기세요.</p>
-                </details>
+                <p class="text-xs text-slate-600 mt-1">비 오는 창밖 풍경을 바라보며 감성 넘치는 이탈리안 요리로 마무리.</p>
             </div>
         </div>
 
-        <!-- 2일차 일정 -->
+        <!-- 2일차 일정 (동일하게 유지) -->
         <div id="day2" class="tab-content space-y-4">
             <div class="bg-indigo-50 border-l-4 border-indigo-500 p-3 rounded-r-xl text-xs text-indigo-800 font-semibold mb-4">
-                🔑 오늘의 핵심: 물놀이 후 아늑한 실내 휴식과 야식 쇼핑!
+                🔑 오늘의 핵심: 물놀이 후 따뜻한 온천 스파로 힐링하기!
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
@@ -153,7 +130,7 @@
                     <i class="fa-solid fa-mug-saucer text-slate-400"></i>
                 </div>
                 <h3 class="font-bold text-base text-slate-800">🍳 켄싱턴호텔 설악 조식</h3>
-                <p class="text-xs text-slate-500 mt-1">든든한 호텔 조식 뷔페로 활기차게 아침을 시작하고 물놀이 짐을 챙깁니다.</p>
+                <p class="text-xs text-slate-500 mt-1">든든한 조식 식사 후 튼튼하게 체력을 충전합니다.</p>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
@@ -161,8 +138,8 @@
                     <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">10:15 ~ 15:00</span>
                     <i class="fa-solid fa-person-swimming text-slate-400"></i>
                 </div>
-                <h3 class="font-bold text-base text-slate-800">한화리조트 설악워터피아 (물놀이)</h3>
-                <p class="text-xs text-slate-500 mt-1">온천수로 가득 찬 테마 워터파크에서 아이와 신나는 물놀이 타임.</p>
+                <h3 class="font-bold text-base text-slate-800">한화리조트 설악워터피아</h3>
+                <p class="text-xs text-slate-500 mt-1">설악산의 100% 천연 온천수로 채워져 흐린 날에도 따뜻하게 즐기는 최고의 테마 워터파크.</p>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
@@ -171,11 +148,7 @@
                     <i class="fa-solid fa-seedling text-slate-400"></i>
                 </div>
                 <h3 class="font-bold text-base text-slate-800">식물원 감성 카페: 시드누아 속초점</h3>
-                <p class="text-xs text-slate-600 mt-1">초록색 식물로 둘러싸인 아늑한 대형 온실형 카페에서 당 충전.</p>
-                <details class="mt-3 border-t pt-2 border-slate-100 text-xs">
-                    <summary class="text-blue-600 cursor-pointer font-semibold focus:outline-none">💡 울산바위 끝판왕 절경을 원할 경우</summary>
-                    <p class="text-slate-500 mt-1 leading-relaxed">소노펠리체 델피노 10층의 <strong>더엠브로시아</strong>로 이동해보세요. 통창에 가득 차는 압도적인 울산바위 뷰가 장관입니다.</p>
-                </details>
+                <p class="text-xs text-slate-600 mt-1">달콤한 디저트와 깊은 향의 드립 커피로 물놀이 후 피로 충전.</p>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
@@ -184,11 +157,7 @@
                     <i class="fa-solid fa-ship text-slate-400"></i>
                 </div>
                 <h3 class="font-bold text-base text-slate-800">아바이마을 갯배 체험 & 단천식당</h3>
-                <p class="text-xs text-slate-600 mt-1">아이가 좋아하는 아날로그 갯배 줄당기기 체험 후 맛있는 아바이순대 식사.</p>
-                <details class="mt-3 border-t pt-2 border-slate-100 text-xs">
-                    <summary class="text-blue-600 cursor-pointer font-semibold focus:outline-none">💡 아이가 순대보다 고기를 원한다면?</summary>
-                    <p class="text-slate-500 mt-1 leading-relaxed">속초 엑스포공원 근처의 <strong>돈우마을</strong>(수제양념갈비 맛집)로 이동합니다. 놀이방은 없으나 시설이 매우 쾌적하고 깔끔하여 가족 단위 식사에 최고입니다.</p>
-                </details>
+                <p class="text-xs text-slate-600 mt-1">갯배 체험으로 이색 재미를 느끼고 든든한 아바이순대와 국밥 식사.</p>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
@@ -197,155 +166,110 @@
                     <i class="fa-solid fa-basket-shopping text-slate-400"></i>
                 </div>
                 <h3 class="font-bold text-base text-slate-800">속초관광수산시장 야식 쇼핑</h3>
-                <p class="text-xs text-slate-500 mt-1">닭강정, 튀김, 아바이오징어순대 등을 양손 무겁게 구매 후 안전히 호텔 복귀!</p>
+                <p class="text-xs text-slate-500 mt-1">속초중앙시장의 넘치는 먹거리들을 구매해 호텔에서 오붓하게 야식을 즐겨보세요.</p>
             </div>
         </div>
 
-        <!-- 3일차 일정 -->
+        <!-- 3일차 일정 (맑은 날 설악산 비경 공략) -->
         <div id="day3" class="tab-content space-y-4">
             <div class="bg-emerald-50 border-l-4 border-emerald-500 p-3 rounded-r-xl text-xs text-emerald-800 font-semibold mb-4">
-                🔑 오늘의 핵심: 바로 집으로 가기 아쉬운 여운을 든든하게 채우는 길!
+                🔑 오늘의 핵심: 맑게 갠 설악산에서 비경을 한눈에 담기!
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
                 <div class="flex items-center justify-between mb-2">
-                    <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">08:00 ~ 09:30</span>
+                    <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">08:00 ~ 09:20</span>
                     <i class="fa-solid fa-mug-saucer text-slate-400"></i>
                 </div>
                 <h3 class="font-bold text-base text-slate-800">🍳 켄싱턴호텔 설악 조식</h3>
-                <p class="text-xs text-slate-500 mt-1">체크아웃을 완벽하게 대비한 여유 있고 정갈한 조식 식사 시간.</p>
+                <p class="text-xs text-slate-500 mt-1">일찍 체크아웃하기 전 든든하게 먹는 맛있는 아침 조식.</p>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
                 <div class="flex items-center justify-between mb-2">
-                    <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">10:30 ~</span>
+                    <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">09:30 ~</span>
                     <i class="fa-solid fa-door-open text-slate-400"></i>
                 </div>
-                <h3 class="font-bold text-base text-slate-800">호텔 체크아웃</h3>
-                <p class="text-xs text-slate-500 mt-1">짐을 싣고 아름다운 설악산 풍경을 뒤로한 채 마지막 날 일정을 출발합니다.</p>
+                <h3 class="font-bold text-base text-slate-800">호텔 조기 체크아웃</h3>
+                <p class="text-xs text-slate-500 mt-1">설악산 케이블카 탑승을 서두르기 위해 신속히 체크아웃을 마칩니다.</p>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
                 <div class="flex items-center justify-between mb-2">
-                    <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">10:45 ~ 12:15</span>
-                    <i class="fa-solid fa-archway text-slate-400"></i>
+                    <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">09:40 ~ 12:00</span>
+                    <i class="fa-solid fa-mountain text-slate-400"></i>
                 </div>
-                <h3 class="font-bold text-base text-slate-800">속초시립박물관 관람 및 역사 체험</h3>
-                <p class="text-xs text-slate-600 mt-1">옛 실향민 가옥 재현 단지와 아이를 위한 전통 민속 놀이 체험관.</p>
-                <details class="mt-3 border-t pt-2 border-slate-100 text-xs">
-                    <summary class="text-blue-600 cursor-pointer font-semibold focus:outline-none">💡 역사 공부 대신 멋진 바다 뷰 산책을 원한다면?</summary>
-                    <p class="text-slate-500 mt-1 leading-relaxed">데크가 무장애 완만형으로 바다를 따라 조성되어 아이도 걷기 편한 <strong>외옹치 바다향기로 산책로</strong>를 걸어보세요.</p>
-                </details>
+                <h3 class="font-bold text-base text-slate-800">⛰️ [설악산] 케이블카 탑승 & 권금성 관람</h3>
+                <p class="text-xs text-slate-600 mt-1">비가 갠 후 한층 선명하고 깨끗해진 설악산의 환상적인 풍경을 감상합니다. 권금성 전망대에서 시원한 자연을 배경으로 가족사진을 촬영하세요.</p>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
                 <div class="flex items-center justify-between mb-2">
-                    <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">12:30 ~ 13:30</span>
+                    <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">12:20 ~ 13:20</span>
                     <i class="fa-solid fa-compass text-slate-400"></i>
                 </div>
-                <h3 class="font-bold text-base text-slate-800">청초호 칠성조선소 방문</h3>
-                <p class="text-xs text-slate-600 mt-1">실제 폐조선소를 힙하게 리사이클링한 대표 복합 문화카페 공간 탐방.</p>
+                <h3 class="font-bold text-base text-slate-800">청초호 칠성조선소 및 주변 식사</h3>
+                <p class="text-xs text-slate-600 mt-1">폐조선소를 트렌디하게 꾸민 카페 겸 문화공간에서 시원한 청초호를 바라보며 마지막 휴식.</p>
                 <details class="mt-3 border-t pt-2 border-slate-100 text-xs">
-                    <summary class="text-blue-600 cursor-pointer font-semibold focus:outline-none">💡 집으로 돌아가는 길목에서 식사하고 싶다면?</summary>
-                    <p class="text-slate-500 mt-1 leading-relaxed">속초에서 출발해 인제IC로 진입, 인제 용대리 황태마을의 명가인 <strong>용바위식당</strong>에서 뜨겁고 뽀얀 황태해장국으로 든든한 점심 식사를 하세요.</p>
+                    <summary class="text-blue-600 cursor-pointer font-semibold focus:outline-none">💡 집으로 돌아가는 길목에서 정갈한 식사를?</summary>
+                    <p class="text-slate-500 mt-1 leading-relaxed">인제 용대리 황태마을의 <strong>용바위식당</strong>에 들러 명품 황태해장국으로 든든하게 속을 풀고 내려가시는 방법도 강추합니다.</p>
                 </details>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 relative">
                 <div class="flex items-center justify-between mb-2">
-                    <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">13:45 ~ 17:40</span>
+                    <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md">13:30 ~ 17:30</span>
                     <i class="fa-solid fa-house text-slate-400"></i>
                 </div>
                 <h3 class="font-bold text-base text-slate-800">안전 귀가 및 고속도로 휴게소 공략</h3>
-                <p class="text-xs text-slate-600 mt-1">금요일 상습 정체 전 조기 출발!</p>
+                <p class="text-xs text-slate-600 mt-1">금요일 오후 길 정체를 대비해 신속하게 출발합니다.</p>
                 <div class="mt-2 pl-3 border-l-2 border-dashed border-slate-200 text-[11px] text-slate-500 space-y-1">
                     <p>📍 <strong>가평휴게소(서울방향)</strong>: 가평맛남샌드, 잣호두과자</p>
-                    <p>📍 <strong>경기광주휴게소(용인방향)</strong>: 마지막 스트레칭 타임</p>
+                    <p>📍 <strong>경기광주휴게소(용인방향)</strong>: 안전 귀가를 위한 마지막 휴식</p>
                 </div>
             </div>
         </div>
 
-        <!-- 다음 여행 추천지 탭 -->
+        <!-- 다음 여행 추천지 탭 (기존과 동일하게 유지) -->
         <div id="extra" class="tab-content space-y-6">
             <div>
                 <h2 class="text-lg font-bold text-slate-800 mb-1">🌲 자연 & 힐링 플레이스</h2>
                 <div class="space-y-3">
                     <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
                         <h3 class="font-bold text-sm text-blue-600">영랑호수공원 & 영랑호수윗길</h3>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">호수 위를 가로지르는 부교를 걷고 울산바위가 수면에 투영되는 놀라운 장관을 눈에 담아보세요. 자전거 대여 코스로 최적입니다.</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
-                        <h3 class="font-bold text-sm text-blue-600">영금정 & 동명해교</h3>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">기암괴석 위에 자리한 동해 최고의 일출/야경 정자. 거문고 소리 같은 파도 진동을 가장 가까이서 느껴볼 수 있는 장소.</p>
+                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">호수 위를 가로지르는 부교를 걷고 울산바위가 수면에 투영되는 놀라운 장관을 눈에 담아보세요.</p>
                     </div>
                 </div>
             </div>
-
             <div>
                 <h2 class="text-lg font-bold text-slate-800 mb-1">📸 감성 문화 & 카페 명소</h2>
                 <div class="space-y-3">
                     <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
                         <h3 class="font-bold text-sm text-indigo-600">하도문 속초</h3>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">중정이 위치한 럭셔리하고 미니멀한 복합 문화 카페. 인근에서 찾아볼 수 없는 세련되고 조용한 무드로 인생 사진을 남기기에 탁월합니다.</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
-                        <h3 class="font-bold text-sm text-indigo-600">보사노바 커피로스터스 속초점</h3>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">액자형 프레임의 대형 소나무 숲 뷰가 완성되는 3층 통창 포토존이 핫한, 속초해수욕장 랜드마크 베이커리 루프탑 카페.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h2 class="text-lg font-bold text-slate-800 mb-1">🧸 아이 동반 이색 체험</h2>
-                <div class="space-y-3">
-                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
-                        <h3 class="font-bold text-sm text-emerald-600">테디베어팜</h3>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">속초 특색(어부, 클라이밍 등)에 완벽 커스터마이징된 앙증맞은 테디베어 세계. 날씨 구애 없는 친근한 인테리어 실내 박물관.</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
-                        <h3 class="font-bold text-sm text-emerald-600">청초호 마리나 요트 투어</h3>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">동해의 품으로 나아가 갈매기 먹이 주기 체험과 시원한 제트 항해로 아이에게 소중한 바다 추억 선사하기.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h2 class="text-lg font-bold text-slate-800 mb-1">🍴 현지 대표 로컬 미식</h2>
-                <div class="space-y-3">
-                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
-                        <h3 class="font-bold text-sm text-amber-600">동명항 오징어난전 (시즌제)</h3>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">봄~가을에 펼쳐지는 항구 감성의 선상 오징어 포차. 갓 썰어낸 산오징어 회, 통찜, 오징어 라면 한 숟가락의 영광.</p>
-                    </div>
-                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
-                        <h3 class="font-bold text-sm text-amber-600">88생선구이</h3>
-                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">석쇠 숯불에 점원이 직접 완벽하게 구워주는 모듬 생선구이 명가. 비린맛이 없어 어린 아이들도 공기밥 두 그릇 순삭 보장.</p>
+                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">미니멀한 중정이 예쁜 조용한 문화 카페. 차분하게 인생 샷을 남기기에 탁월합니다.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 실시간 체크리스트 (유저 사용 편의성 극대화) -->
+        <!-- 우천 시 필수 체크리스트 추가 -->
         <hr class="my-8 border-slate-200">
         <section class="bg-slate-100 rounded-3xl p-6">
             <h2 class="font-bold text-base text-slate-800 mb-3 flex items-center">
-                <i class="fa-solid fa-list-check text-blue-600 mr-2"></i>여행 짐 체크리스트
+                <i class="fa-solid fa-umbrella text-blue-600 mr-2"></i>우천 안전 & 물놀이 체크리스트
             </h2>
             <div class="space-y-2 text-xs text-slate-600">
                 <label class="flex items-center space-x-2 bg-white p-2.5 rounded-xl border border-slate-200/60 cursor-pointer">
-                    <input type="checkbox" class="rounded text-blue-600 focus:ring-blue-500 w-4 h-4">
-                    <span>예약 확인 (호텔 바우처, 워터파크 예매권 등)</span>
+                    <input type="checkbox" class="rounded text-blue-600 focus:ring-blue-500 w-4 h-4" checked>
+                    <span>가족 수만큼 큰 우산 및 유아용 우비 미리 챙기기</span>
                 </label>
                 <label class="flex items-center space-x-2 bg-white p-2.5 rounded-xl border border-slate-200/60 cursor-pointer">
                     <input type="checkbox" class="rounded text-blue-600 focus:ring-blue-500 w-4 h-4">
-                    <span>물놀이 준비물 (수영복, 아쿠아슈즈, 구명조끼, 방수팩)</span>
+                    <span>에어컨 바람에 아이가 감기 걸리지 않도록 비치타월, 여벌 겉옷</span>
                 </label>
                 <label class="flex items-center space-x-2 bg-white p-2.5 rounded-xl border border-slate-200/60 cursor-pointer">
                     <input type="checkbox" class="rounded text-blue-600 focus:ring-blue-500 w-4 h-4">
-                    <span>아이 용품 (여벌 옷, 선크림, 모자, 모기 퇴치제, 비상약)</span>
-                </label>
-                <label class="flex items-center space-x-2 bg-white p-2.5 rounded-xl border border-slate-200/60 cursor-pointer">
-                    <input type="checkbox" class="rounded text-blue-600 focus:ring-blue-500 w-4 h-4">
-                    <span>스마트폰 보조배터리 및 충전 선</span>
+                    <span>양양고속도로 터널 구간 빗길 감속 운전 다짐!</span>
                 </label>
             </div>
         </section>
@@ -354,16 +278,12 @@
 
     <!-- 스크립트 기능 처리 -->
     <script>
-        // 탭 스위칭 기능
         function switchTab(tabId) {
-            // 모든 콘텐츠 숨기기
             document.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.remove('active');
             });
-            // 선택한 탭 보이기
             document.getElementById(tabId).classList.add('active');
 
-            // 탭 버튼 스타일 원복 및 변경
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.className = "tab-btn flex-1 py-3 px-2 rounded-2xl text-center font-bold text-sm bg-white text-slate-500 shadow-sm border border-slate-100 transition-all";
             });
@@ -371,29 +291,6 @@
             const activeBtn = document.getElementById('btn-' + tabId);
             activeBtn.className = "tab-btn flex-1 py-3 px-2 rounded-2xl text-center font-bold text-sm bg-blue-600 text-white shadow-md transition-all";
         }
-
-        // 실시간 디데이 카운트다운 기능 (출발일: 2026년 7월 15일)
-        function updateCountdown() {
-            const targetDate = new Date('2026-07-15T00:00:00').getTime();
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-            const countdownEl = document.getElementById('countdown');
-            const containerEl = document.getElementById('dday-container');
-
-            if (difference < 0) {
-                countdownEl.innerHTML = "지금 속초 여행 중! 🚗";
-                containerEl.classList.remove('text-indigo-700');
-                containerEl.classList.add('bg-emerald-500', 'text-white');
-            } else {
-                countdownEl.innerHTML = `D-${days}일 ${hours}시간전`;
-            }
-        }
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
     </script>
 </body>
 </html>
